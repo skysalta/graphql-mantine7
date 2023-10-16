@@ -1,6 +1,29 @@
 import { Badge, Button, Card, Container, Grid, Group, Text } from '@mantine/core';
 import classes from './index.module.css';
 
+import { gql } from '@apollo/client';
+import createApolloClient from '../apollo-client';
+
+export async function getStaticProps() {
+  const client = createApolloClient();
+  const { data } = await client.query({
+    query: gql`
+      query Countries {
+        countries {
+          code
+          name
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      countries: data.countries.slice(0, 10),
+    },
+  };
+}
+
 export default function HomePage() {
   return (
     <>
