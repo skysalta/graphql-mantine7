@@ -1,28 +1,25 @@
 export const typeDefs = `#graphql
+  enum TaskType {
+    IT
+    BA
+    SEO
+    UX
+  }
   type Task {
     id: ID!
-    title: String!
-    platform: [String!]!
-    reviews: [Review!]
-  }
-  type Review {
-    id: ID!
-    rating: Int!
-    content: String!
-    author: Author!
-    task: Task!
+    name: String!
+    type: TaskType!
+    description: String!
+    author: [Author!]
   }
   type Author {
     id: ID!
     name: String!
-    verified: Boolean!
-    reviews: [Review!]
+    tasks: [Task!]
   }
   type Query {
     tasks: [Task]
     task(id: ID!): Task
-    reviews: [Review]
-    review(id: ID!): Review
     authors: [Author]
     author(id: ID!): Author
   }
@@ -32,11 +29,12 @@ export const typeDefs = `#graphql
     updateTask(id: ID!, edits: EditTaskInput): Task
   }
   input AddTaskInput {
-    title: String!,
-    platform: [String!]!
+    name: String!,
+    type: TaskType!,
+    description: String!
   }
   input EditTaskInput {
-    title: String,
-    platform: [String!]
+    name: String,
+    type: TaskType
   }
 `

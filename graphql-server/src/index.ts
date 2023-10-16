@@ -22,24 +22,10 @@ const resolvers = {
     author(_, args) {
       return db.authors.find((author) => author.id === args.id)
     },
-    reviews() {
-      return db.reviews
-    },
-    review(_, args) {
-      return db.reviews.find((review) => review.id === args.id)
-    }
   },
   Task: {
     reviews(parent) {
       return db.reviews.filter((r) => r.task_id === parent.id)
-    }
-  },
-  Review: {
-    author(parent) {
-      return db.authors.find((a) => a.id === parent.author_id)
-    },
-    task(parent) {
-      return db.tasks.find((g) => g.id === parent.task_id)
     }
   },
   Author: {
