@@ -1,0 +1,21 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "Workshop for Salta employees",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js"
+  },
+  "author": "Sky Verhoeven",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^4.9.4",
+    "graphql": "^16.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "typescript": "^5.2.2"
+  }
+}

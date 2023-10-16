@@ -36,3 +36,7 @@ yarn-error.log*
 
 # storybook
 storybook-static
+
+# graphql-server directory gitignores
+/graphql-server/node_modules
+/graphql-server/dist
