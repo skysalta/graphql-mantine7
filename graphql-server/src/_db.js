@@ -1,7 +1,5 @@
-let tasks = []
+let tasks = [];
 
-let authors = []
+let authors = [];
 
-let reviews = []
-
-export default { tasks, authors, reviews }
+export default { tasks, authors };
