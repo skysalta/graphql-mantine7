@@ -7,6 +7,7 @@
     "build": "next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
+    "start:server": "cd graphql-server && npm run compile && node ./dist/index.js",
     "export": "next build && next export",
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
