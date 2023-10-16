@@ -35,6 +35,7 @@ export const typeDefs = `#graphql
   }
   input EditTaskInput {
     name: String,
-    type: TaskType
+    type: TaskType,
+    description: String
   }
-`
+`;

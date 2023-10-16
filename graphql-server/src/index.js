@@ -24,7 +24,7 @@ const resolvers = {
     },
   },
   Task: {
-    authors(parent) {
+    author(parent) {
       return db.authors.filter((r) => r.task_id === parent.id);
     },
   },

@@ -4,19 +4,13 @@
   "description": "Workshop for Salta employees",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "node src/index.js"
   },
-  "keywords": [],
   "author": "Sky Verhoeven",
-  "license": "ISC",
   "type": "module",
+  "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.9.4",
     "graphql": "^16.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.6",
-    "typescript": "^5.2.2"
   }
 }
