@@ -1,16 +1,5 @@
-import {
-  Badge,
-  Button,
-  Card,
-  Center,
-  Container,
-  Grid,
-  Group,
-  Text,
-  ThemeIcon,
-} from '@mantine/core';
+import { Badge, Button, Card, Container, Grid, Group, Text } from '@mantine/core';
 import classes from './index.module.css';
-import { IconCodeCircle } from '@tabler/icons-react';
 
 export default function HomePage() {
   return (
